@@ -12,6 +12,9 @@ Page({
    */
   onLoad: function (option) {
     console.log(option.city)
+    wx.setNavigationBarTitle({
+      title: option.city,
+    })
   },
 
   /**
