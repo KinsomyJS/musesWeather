@@ -1,0 +1,3 @@
+<view wx:for="{{array}}" bindtap='choosecity' data-city="{{item.city}}">
+  {{item.city}}
+</view>
