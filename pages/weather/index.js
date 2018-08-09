@@ -1,3 +1,5 @@
+var dailyForecast;
+
 Page({
 
   /**
@@ -16,6 +18,7 @@ Page({
       title: option.city,
     })
 
+    let that = this;
     wx.request({
       url: 'https://free-api.heweather.com/s6/weather/forecast', //三天天气api
       data: {
@@ -26,7 +29,12 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        console.log(res.data);
+        var forecast = JSON.parse(JSON.stringify(res.data));
+        dailyForecast = forecast.HeWeather6[0].daily_forecast;
+        console.log(dailyForecast);
+        that.setData({
+          array:dailyForecast
+        })
       }
     })
   },

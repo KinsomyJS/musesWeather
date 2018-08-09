@@ -1,0 +1,5 @@
+<view wx:for="{{array}}">
+  {{item.date}} 
+  温度 {{item.tmp_min}} — {{item.tmp_max}} 
+  {{item.cond_txt_d}} 转 {{item.cond_txt_n}}
+</view>
