@@ -1,14 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/weather/index",
-    "pages/cities/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "MusesSmile",
     "navigationBarTextStyle":"black"
   }
 }

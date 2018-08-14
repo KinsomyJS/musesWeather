@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTitleText": "MusesSmile",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "heartbeat": "/components/heartbeat/heartbeat"
+  }
+}
