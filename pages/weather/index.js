@@ -19,12 +19,6 @@ Page({
     icons: ['/img/clothing.png', '/img/carwashing.png', '/img/pill.png', '/img/running.png', '/img/sun.png'],
     // 用来清空 input
     searchText: '',
-    // 是否已经弹出
-    hasPopped: false,
-    animationMain: {},
-    animationOne: {},
-    animationTwo: {},
-    animationThree: {},
     // 是否切换了城市
     cityChanged: false,
     // 需要查询的城市
@@ -85,6 +79,7 @@ Page({
     }
   },
   success(data) {
+    console.log("success(data)",data);
     this.setData({
       openSettingButtonShow: false,
     })
@@ -134,7 +129,7 @@ Page({
     }
     wx.pageScrollTo({
       scrollTop: 0,
-      duration: 300,
+      duration: 600,
     })
     if (val) {
       this.geocoder(val, (loc) => {
@@ -151,6 +146,7 @@ Page({
       success(res) {
         let data = res.data || {}
         if (!data.status) {
+          console.log('data' ,data)
           let location = (data.result || {}).location || {}
           // location = {lng, lat}
           success && success(location)
@@ -216,6 +212,7 @@ Page({
     }
   },
   init(params) {
+    console.log('init(params)', params.location);
     let BMap = new bmap.BMapWX({
       ak: globalData.ak,
     })
@@ -225,15 +222,6 @@ Page({
       success: this.success,
     })
   },
-  // drawWeather () {
-  //   let context = wx.createCanvasContext('line')
-  //   context.setStrokeStyle("#ffffff")
-  //   context.setLineWidth(1)
-  //   context.moveTo(0, 0)
-  //   context.lineTo(350, 150)
-  //   context.stroke()
-  //   context.draw()
-  // },
   onPullDownRefresh(res) {
     this.init({})
   },
@@ -256,6 +244,7 @@ Page({
     let cityDatas = wx.getStorage({
       key: 'cityDatas',
       success: (res) => {
+        console.log('cityDatas:',res);
         this.setData({
           cityDatas: res.data,
         })
