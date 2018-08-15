@@ -1,5 +1,7 @@
 {
   "pages":[
+    
+    "pages/map/index",
     "pages/weather/index",
     "pages/logs/logs"
   ],

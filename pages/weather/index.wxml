@@ -15,7 +15,6 @@
         <view>{{cityDatas.originalData.results[0].currentCity || '定位中'}}</view>
         <text class='time' wx:if='{{cityDatas.updateTimeFormat}}'>{{cityDatas.updateTimeFormat}} 更新</text>
       </view>
-      <view class='message'>{{message}}</view>
       <view wx:if='{{cityDatas.temperature}}' class='temp num' decode='true'>{{cityDatas.temperature}}<text style='font-size:90rpx'>°</text></view>
       <view class='weather'>{{cityDatas.originalData.results[0].weather_data[0].weather || '--'}}</view>
       <view class='pm' wx:if='{{cityDatas.pm.val}}'>
@@ -49,6 +48,7 @@
   </view>
 <view>
 <view class='copy' catchtap='customBcg'>自定义背景</view>
+<view class='copy' catchtap='toMap'>进入地图</view>
 </view>
   <view class='copy'>
     <view>数据来源 百度地图开放平台</view>

@@ -6,7 +6,6 @@
 // 200-300 重度污染：非常不健康
 // 300-500 严重污染：有毒物
 // 500以上 爆表：有毒物
-let messages = require('../../data/messages.js')
 let bmap = require('../../libs/bmap-wx.js')
 let utils = require('../../utils/util.js')
 let globalData = getApp().globalData
@@ -271,9 +270,6 @@ Page({
         searchCity: '',
       })
     }
-    this.setData({
-      message: messages.messages(),
-    })
   },
   onHide() {
     wx.setStorage({
@@ -409,6 +405,13 @@ Page({
           })
         }
       },
+    })
+  },
+
+  //进入地图
+  toMap(){
+    wx.navigateTo({
+      url: '/pages/map/index',
     })
   },
 })

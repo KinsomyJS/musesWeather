@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+  font-size: 30rpx;
+}
+.map_container {
+  top: 0;
+  height: 800rpx;
+  width: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.place_info {
+  padding: 0 5px;
+}
+
+
+.search {
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background: gray;
+  opacity: 0.4;
+  height: 90rpx;
+}
+
+.search .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+  height: 60rpx;
+  margin: 15rpx 50rpx;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  /* border-radius: 10rpx; */
+  /* border: 1rpx solid #999; */
+  border: none;
+  border-bottom: 1rpx solid #fff;
+}
+.search image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 16rpx;
+}
+.search input {
+  flex: 1;
+}
+.placeholderClass {
+  color: #fff;
+}
