@@ -1,0 +1,57 @@
+.vp_tab_container {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 20rpx 0 0;
+  white-space: nowrap;
+}
+
+.vp_tab_container_padd {
+  display: inline-block;
+  width: 24rpx;
+}
+
+.vp_tab_item_s {
+  display: inline-block;
+  line-height: 40rpx;
+  padding: 12rpx 32rpx;
+  color: #ed373d;
+  margin-right: 8rpx;
+  margin-left: 8rpx;
+  font-size: 28rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #fff;
+  border-radius: 4rpx;
+  border: 1px solid #ed373d;
+}
+
+.vp_tab_item_n {
+  display: inline-block;
+  padding: 12rpx 32rpx;
+  line-height: 40rpx;
+  color: #353535;
+  margin-right: 8rpx;
+  background-color: #fff;
+  margin-left: 8rpx;
+  font-size: 28rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4rpx;
+  border: 1px solid #ccc;
+}
+
+/**
+去除横向滚动条
+*/
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.content {
+  width: 100%;
+}

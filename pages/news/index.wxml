@@ -1,0 +1,12 @@
+<scroll-view scroll-x="true" class="vp_tab_container">
+  <view class="vp_tab_container_padd"></view>
+  <block wx:for="{{ips}}" wx:for-item="ip" wx:key="{{ip.id}}">
+    <view class="{{ip.isSelect?'vp_tab_item_s':'vp_tab_item_n'}}" bindtap="onIpItemClick" wx:key="{{ip.id}}" data-item="{{ip}}">
+      {{ip.title}}
+    </view>
+  </block>
+  <view class="vp_tab_container_padd"></view>
+</scroll-view>
+<view class='content'>
+  {{content}}
+</view>

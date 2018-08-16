@@ -12,7 +12,9 @@ App({
     keepscreenon: false,
     systeminfo: {},
     isIPhoneX: false,
-    ak: 'D3TgSK54SeEG35g12dZYw6dLVtLCmGG9',
+    ak: '',
+    accessKey:'',
+    secretKey:'',
   },
   setGeocoderUrl(address) {
     return `https://api.map.baidu.com/geocoder/v2/?address=${address}&output=json&ak=${this.globalData.ak}`
