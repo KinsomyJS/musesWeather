@@ -1,9 +1,9 @@
 {
   "pages":[
     
+    "pages/weather/index",
     "pages/news/index",
     "pages/map/index",
-    "pages/weather/index",
     "pages/logs/logs"
   ],
   "window":{

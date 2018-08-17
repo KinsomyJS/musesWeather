@@ -1,12 +1,18 @@
 <scroll-view scroll-x="true" class="vp_tab_container">
   <view class="vp_tab_container_padd"></view>
-  <block wx:for="{{ips}}" wx:for-item="ip" wx:key="{{ip.id}}">
-    <view class="{{ip.isSelect?'vp_tab_item_s':'vp_tab_item_n'}}" bindtap="onIpItemClick" wx:key="{{ip.id}}" data-item="{{ip}}">
-      {{ip.title}}
+  <block wx:for="{{categories}}" wx:for-item="category" wx:key="{{category.name}}">
+    <view class="{{category.isSelect?'vp_tab_item_s':'vp_tab_item_n'}}" bindtap="onCategoryItemClick" wx:key="{{category.name}}" data-item="{{category}}">
+      {{category.name}}
     </view>
   </block>
   <view class="vp_tab_container_padd"></view>
 </scroll-view>
-<view class='content'>
-  {{content}}
-</view>
+<scroll-view scroll-y="true">
+  <view class='news_item' wx:for='{{news}}' wx:for-item='new'>
+    <image class='icon' src='{{new.thumbnail_img[0]}}'></image>
+    <view class='right'>
+      <view class='value'>{{new.title}}</view>
+      <view class='source' wx:if='{{new.source}}'>来源:{{new.source}}</view>
+    </view>
+  </view>
+</scroll-view>

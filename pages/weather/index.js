@@ -409,9 +409,9 @@ Page({
   },
 
   //进入地图
-  toMap(){
+  toNews(){
     wx.navigateTo({
-      url: '/pages/map/index',
+      url: '/pages/news/index',
     })
   },
 })

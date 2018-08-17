@@ -48,7 +48,7 @@
   </view>
 <view>
 <view class='copy' catchtap='customBcg'>自定义背景</view>
-<view class='copy' catchtap='toMap'>进入地图</view>
+<view class='copy' catchtap='toNews'>新闻头条</view>
 </view>
   <view class='copy'>
     <view>数据来源 百度地图开放平台</view>
